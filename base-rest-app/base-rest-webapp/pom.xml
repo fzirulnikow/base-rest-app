@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <artifactId>base-rest-app</artifactId>
+    <groupId>com.examples</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>base-rest-webapp</artifactId>
+  <packaging>war</packaging>
+  <name>base-rest-webapp Maven Webapp</name>
+  <url>http://www.examples.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  
+  	<!-- simple module dependencies -->
+    <dependency>
+    	<groupId>com.simple</groupId>
+    	<artifactId>api</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+    <!-- spring-boot-web -->
+    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+	</dependency> 
+
+  </dependencies>
+
+  <build>
+    <finalName>base-rest-webapp</finalName>
+    <pluginManagement>
+		<plugins>
+      		
+      		<!-- spring-boot-maven plugin-->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		
+			<!-- springdoc-openapi (swagger)-->
+			<plugin>	
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-maven-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<id>integration-test</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</pluginManagement>
+  </build>
+</project>
