@@ -1,4 +1,4 @@
-package com.examples.base.rest.webapp.config;
+package com.examples.base.rest;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +11,7 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com")
+@ComponentScan(basePackages = "com.examples")
 public class ExampleSpringBootApplication {
 
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class ExampleSpringBootApplication {
 	@Bean
 	public OpenAPI customOpenAPI(@Value("${application-description}") String appDesciption,
 			@Value("${application-version}") String appVersion) {
-		return new OpenAPI().info(new Info().title("sample application API").version(appVersion)
+		return new OpenAPI().info(new Info().title("Base Rest Application").version(appVersion)
 				.description(appDesciption).termsOfService("http://swagger.io/terms/")
 				.license(new License().name("Apache 2.0").url("http://springdoc.org")));
 	}

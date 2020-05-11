@@ -1,15 +1,9 @@
 package com.examples.base.rest.persistence.DAO;
 
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import lombok.Data;
+import com.examples.base.rest.persistence.model.User;
 
-@Component
-@Data
-public class ExampleDAO {
-
-	public String initialGet() {
-		return "Hola!";
-	}
+public interface ExampleDAO extends JpaRepository<User, Integer> {
 
 }
