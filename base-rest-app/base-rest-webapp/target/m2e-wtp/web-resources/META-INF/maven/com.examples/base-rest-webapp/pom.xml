@@ -22,8 +22,8 @@
   
   	<!-- simple module dependencies -->
     <dependency>
-    	<groupId>com.simple</groupId>
-    	<artifactId>api</artifactId>
+    	<groupId>com.examples</groupId>
+    	<artifactId>base-rest-api</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
     

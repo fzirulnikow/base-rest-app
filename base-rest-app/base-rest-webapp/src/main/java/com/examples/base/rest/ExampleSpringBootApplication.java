@@ -11,7 +11,7 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.examples")
+@ComponentScan(basePackages = "com")
 public class ExampleSpringBootApplication {
 
 	public static void main(String[] args) {
